@@ -1,0 +1,14 @@
+========================================
+SECURITY LOG SUMMARY REPORT
+========================================
+Total login attempts: 8
+Successful logins: 3
+Failed logins: 5
+Internal IPs: 4
+External IPs: 4
+========================================
+
+Possible brute-force alert:
+User 'bob' had 3 failed logins from IP 8.8.8.8
+========================================
+Analysis complete.
