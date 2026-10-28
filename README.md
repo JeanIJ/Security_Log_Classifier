@@ -1,17 +1,11 @@
 # Security Log Classifier
 
-Python script that summarizes login logs and flags possible brute-force patterns.
+Python script that reads a login log and writes a short summary.
 
-## Description
-Reads login log lines (user, IP, SUCCESS/FAILURE), counts successes and failures, classifies internal vs external IPs, and flags user+IP pairs with three or more failures as possible brute force. Writes a summary report.
+Each line is a username, an IP, and `SUCCESS` or `FAILURE`. It counts successes and failures, treats addresses starting with `10.` or `192.168.` as internal (the rest as external), and flags any username and IP with three or more failures as a possible brute-force attempt. The report is printed and saved to `summary.txt`.
 
-## Technologies
-- Python 3
-
-## Usage
 ```bash
 python3 security_log_classifier.py
 ```
 
-## Status
-Completed learning exercise.
+It asks for a log filename and uses `logins.txt` if you press Enter.
